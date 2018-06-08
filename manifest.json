@@ -1,0 +1,43 @@
+{
+  "applications": {
+    "gecko": {
+      "id": "readlater@msjessi.ca",
+      "strict_min_version": "54.0"  // minimum for newtab override
+    }
+  },
+  
+  "background": {
+    "scripts": ["readlater.js"]
+  },
+  
+  "browser_action": {
+    "default_icon": {
+      "16": "button/save16.png",
+      "32": "button/save32.png",
+      "64": "button/save64.png"
+    },
+    "default_title": "Save for later"
+  },
+  
+  "chrome_url_overrides": {
+    "newtab": "reading-list.html"
+  },
+  
+  "description": "Save links to read later, and display currently saved links in new tabs.",
+  
+  "icons": {
+    "48": "icon.png",
+    "96": "icon@2x.png"
+  },
+    
+  "manifest_version": 2,
+  
+  "name": "Read Later",
+  
+  "permissions": [
+    "tabs",
+    "storage"
+  ],
+  
+  "version": "0.1.0"
+}
